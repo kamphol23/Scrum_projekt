@@ -14,10 +14,9 @@ body{
 .contanier{
  width: 70%;
  height: 700px;
- background-color: palegreen;
+ background-color:bisque;
  margin-left: 200px;
  margin-top: 100px;
- border-radius: 15px 15px 15px 15px;
  border: solid 5px ;
  position: relative;
 }
@@ -43,9 +42,22 @@ height: 50%;
 float: right;
 background-color:tan;
 border: solid 2px;
+font-size: 20px;
 }
 
 .playerHub .spellTap button:hover{
   background-color: snow;
 
+}
+
+
+
+
+
+#player{
+  height: 280px;
+  width: 280px;
+  background-image:url("picture/knight_idle.gif");
+  background-repeat: no-repeat;
+  margin-top: 150px;
 }
