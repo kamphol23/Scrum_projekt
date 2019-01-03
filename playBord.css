@@ -1,3 +1,16 @@
+body{
+  transition: .6s sease;
+  animation: change 10s infinite;
+
+}
+ @keyframes change{
+ 0%  { background-color:#1a1919}
+ 25% { background-color:#be000e}
+ 50% { background-color:#f6f4f2}
+ 75% { background-color:#002b6c}
+ 100%{ background-color:#011e2e}
+}
+
 .contanier{
  width: 70%;
  height: 700px;
@@ -24,6 +37,15 @@
   background-color: saddlebrown;
 }
 
-.spellTap < button{
+.playerHub .spellTap  button{
+width: 50%;
+height: 50%;
+float: right;
+background-color:tan;
+border: solid 2px;
+}
+
+.playerHub .spellTap button:hover{
+  background-color: snow;
 
 }
