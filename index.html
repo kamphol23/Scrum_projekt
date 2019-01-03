@@ -12,21 +12,24 @@
 </head>
 <body>
 <script src="playBord.js"> </script>
+<script src="figth.js"> </script>
+
 <div class="contanier">
 
-
+<h2>Din Hälsa 100<span id="din-hälsa"></span></h2>
     <div id="player"> </div>
 
+<h2>Motståndarens Hälsa 100 <span id="motståndarens-hälsa"></span> </h2>
     <div class="enermy"></div>
 
 
 
 <div class="playerHub">
   <div class="spellTap">
-    <button type="button" class="spellOne"> Aouto attack </button>
-    <button type="button" class="spellTwo"> Beserker slam</button>
-    <button type="button" class="spellThree"> Over power</button>
-    <button type="button" class="spellfour"> Doom slam</button>
+    <button id="arrow" onclick="pil()">Aouto attack</button>
+   <button id="fire" onclick="eld()">Beserker slam</button>
+   <button id="rain" onclick="regn()">Over power</button>
+   <button id="cold"onclick="köld()">Doom slam</button>
   </div>
 </div>
 
