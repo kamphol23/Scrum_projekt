@@ -50,14 +50,17 @@ font-size: 20px;
 
 }
 
-
-
-
+.enermy{
+  height: 280px;
+  width: 280px;
+  background-image: url('picture/enermy.gif');
+  float: right;
+  margin-bottom: 200px;
+}
 
 #player{
   height: 280px;
   width: 280px;
   background-image:url("picture/knight_idle.gif");
-  background-repeat: no-repeat;
   margin-top: 150px;
 }
