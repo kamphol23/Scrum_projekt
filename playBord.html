@@ -12,24 +12,41 @@
 </head>
 <body>
 <script src="playBord.js"> </script>
+
 <div class="contanier">
-     <div id="player"> </div>
+
+
+<div class="faceOff">
+
+<div id="player">
+
+    <img src="picture/knight_idle.gif" class="playerImg">
+</div>
+
+    <div class="enermy">
+<div class="enemyHPBar">Rotten root <span id="enemy-hp"></span> </div>
+    </div>
+</div>
 
 
 
-
-
+<div id="msgToPlayerAttack"> </div>
+<div id="msgToPlayerAttacked"></div>
 
 <div class="playerHub">
   <div class="spellTap">
-    <button type="button" class="spellOne"> Aouto attack </button>
-    <button type="button" class="spellTwo"> Beserker slam</button>
-    <button type="button" class="spellThree"> Over power</button>
-    <button type="button" class="spellfour"> Doom slam</button>
-  </div>
+    <button id="attack1" onclick="attackFunction1()"></button>
+        <button id="attack2" onclick="attackFunction2()"></button>
+        <button id="attack3" onclick="attackFunction3()"></button>
+        <button id="attack4" onclick="attackFunction4()"></button>
 </div>
+  <div class="player_HP_bar"><span id="player-hp"></span></div>
+
+
 
 </div>
+
+
 </body>
-
+<script src="figth.js"> </script>
 </html>
