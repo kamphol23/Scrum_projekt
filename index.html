@@ -15,22 +15,34 @@
 
 <div class="contanier">
 
-<h2>Din Hälsa <span id="din-hälsa"></span></h2>
-    <div id="player"> </div>
 
-<h2>Motståndarens Hälsa <span id="motståndarens-hälsa"></span> </h2>
-    <div class="enermy"></div>
+<div class="faceOff">
+
+<div id="player">
+
+    <img src="picture/knight_idle.gif" class="playerImg">
+</div>
+
+    <div class="enermy">
+<div class="enemyHPBar">Rotten root <span id="enemy-hp"></span> </div>
+    </div>
+</div>
 
 
+
+<div id="msgToPlayerAttack"> </div>
+<div id="msgToPlayerAttacked"></div>
 
 <div class="playerHub">
   <div class="spellTap">
-    <button id="arrow" onclick="pil()">Aouto attack</button>
-   <button id="fire" onclick="eld()">Beserker slam</button>
-   <button id="rain" onclick="regn()">Over power</button>
-   <button id="cold"onclick="köld()">Doom slam</button>
-  </div>
+    <button id="attack1" onclick="attackFunction1()"></button>
+        <button id="attack2" onclick="attackFunction2()"></button>
+        <button id="attack3" onclick="attackFunction3()"></button>
+        <button id="attack4" onclick="attackFunction4()"></button>
 </div>
+  <div class="player_HP_bar"><span id="player-hp"></span></div>
+
+
 
 </div>
 
