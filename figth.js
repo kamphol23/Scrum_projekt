@@ -26,6 +26,7 @@ const characterNameCreated = () => {
 selectCharacterClassWarrior = () => {
   selectedClass.innerText = "You have selected the way of the Warrior, " + player.name + ""
   charactersclassMeny.hidden = true;
+  document.getElementById("contanierHidden").id = "contanierShow"; 
 
   player.class = "Warrior";
   player.Abillity1 = "Hack";
@@ -48,6 +49,7 @@ selectCharacterClassMage = () => {
 selectCharacterClassArcher = () => {
   charactersclassMeny.hidden = true;
   selectedClass.innerText = "You have selected the agile Archer"
+  document.getElementById("contanierHidden").id = "contanierShow"; 
   player.class = "Archer";
   player.Abillity1 = "Flame Arrow";
   player.Abillity2 = "Stun Arrow";
