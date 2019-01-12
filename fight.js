@@ -35,6 +35,9 @@ let enemy = {
 
 /*click functions to load at start*/
 $(document).ready(() => {
+
+
+
   startFight = document.getElementById('startFight');
   fromTownToBattle = document.getElementById('fromTownToBattle')
   toTownFromBattle = document.getElementById('toTownFromBattle')
@@ -94,18 +97,32 @@ $(document).ready(() => {
     playerClass.innerText = "Class: "+ player.class +"";
     monstersKilled.innerText = "Enemys killed: "+ player.enemysKilled +""
   });
+
+
+
+function isThisAWarrior(){
+  if(player.class === "Warrior") {
+    return warriorMoves();
+}
+}
+
+function warriorMoves(){
+        document.getElementById("playerImg").src = "picture/knight_attack.gif";
+        document.getElementById('player').id = 'playerMove';
+  if(player.calss = "warrior"){
+      setTimeout(() => {
+          document.getElementById("playerImg").src = "picture/knight_idle.gif";
+          document.getElementById('playerMove').id = 'player';
+        }, 1000)
+      }
+}
+
+
+
   $('#attack1').click(function(){
     msgToPlayer();
     enemyAttacked1();
-document.getElementById("playerImg").src = "picture/knight_attack.gif";
-document.getElementById('player').id = 'playerMove';
-if(player.calss = "warrior"){
-  setTimeout(() => {
-  document.getElementById("playerImg").src = "picture/knight_idle.gif";
-  document.getElementById('playerMove').id = 'player';
-}, 1000)
-}
-
+     isThisAWarrior();
 
       if (isGameOver(enemy.hp)){
         enemyKilled();
@@ -118,7 +135,9 @@ if(player.calss = "warrior"){
 
     attackDisable();
     setTimeout(() => {
+
       enemyAttack();
+
         if (isGameOver(player.hp)){
           thePlayerHaveDied();
           whenGameIsOver();
@@ -131,6 +150,7 @@ if(player.calss = "warrior"){
   $('#attack2').click(function(){
     msgToPlayer();
     enemyAttacked2();
+    isThisAWarrior();
       if (isGameOver(enemy.hp)){
         enemyKilled();
         playerLvlUp();
@@ -152,6 +172,7 @@ if(player.calss = "warrior"){
   $('#attack3').click(function(){
     msgToPlayer();
     enemyAttacked3();
+    isThisAWarrior();
       if (isGameOver(enemy.hp)){
         enemyKilled();
         playerLvlUp();
@@ -173,6 +194,7 @@ if(player.calss = "warrior"){
   $('#attack4').click(function(){
     msgToPlayer();
     enemyAttacked4();
+    isThisAWarrior();
       if (isGameOver(enemy.hp)){
         enemyKilled();
         playerLvlUp();
@@ -252,7 +274,8 @@ let monsterMakerMadness = () => {
         Abillity4: "Flee"
     },
     {
-       name: "Tiger",
+      Image: "url('picture/Bash_bransh_monster.gif')",
+       name: "Rotten rot",
        hp: 15,
        dmg: 10,
        exp: 50,
@@ -283,6 +306,7 @@ let monsterMakerMadness = () => {
   },
   {
      name: "Spider",
+     Image: "url('picture/spoooder.gif')",
      hp: 5,
      dmg: 5,
      exp: 5,
@@ -296,6 +320,8 @@ let monsterMakerMadness = () => {
   let rand = monsterList[Math.floor(Math.random() * monsterList.length)];
 
   //for(i = 0; i < monsterList.length; i++)
+
+    document.getElementById("enermy").style.backgroundImage = rand.Image;
     enemy.name = rand.name;
     enemy.hp = rand.hp;
     enemy.dmg = rand.dmg;
@@ -368,8 +394,10 @@ let whenGameIsOver = () => {
 };
 let fightMoreEnemys = () => {
    monsterMakerMadness();
+
 }; //fight another random enemy
 const printToScreen = () => {
+
 
   document.getElementById('enemy-hp').innerText =
   enemy.name +" "+ enemy.hp +" Hp";
